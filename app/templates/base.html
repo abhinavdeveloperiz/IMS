@@ -241,8 +241,100 @@
     {% block content %}
     {% endblock %}
 
+        <footer class="bg-gray-900 text-gray-200 mt-12">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About / Brand -->
+                <div>
+                    <a href="{% url 'home' %}" class="flex items-center mb-4">
+                        <img src="{% static 'images/logo.png' %}" alt="Logo" class="h-12 mr-3">
+                        <span class="text-xl font-semibold">IMS</span>
+                    </a>
+                    <p class="text-sm text-gray-400">
+                        Trusted partner in logistics — delivering global supply chain solutions with reliability and speed.
+                    </p>
+                    <div class="mt-4 flex space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
 
-    <!-- ... Your existing footer code ... -->
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="{% url 'about' %}" class="hover:text-white">About Us</a></li>
+                        <li><a href="{% url 'services' %}" class="hover:text-white">Services</a></li>
+                        <li><a href="{% url 'gallery' %}" class="hover:text-white">Gallery</a></li>
+                        <li><a href="{% url 'blognews' %}" class="hover:text-white">Blog / News</a></li>
+                        <li><a href="{% url 'contact' %}" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Snapshot -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Our Services</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="{% url 'services' %}#air" class="hover:text-white">Air Freight</a></li>
+                        <li><a href="{% url 'services' %}#ocean" class="hover:text-white">Ocean Freight</a></li>
+                        <li><a href="{% url 'services' %}#road" class="hover:text-white">Road Transport</a></li>
+                        <li><a href="{% url 'services' %}#customs" class="hover:text-white">Customs Clearance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact / Newsletter -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <ul class="text-sm text-gray-400 space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-green-400"></i>
+                            <span>123 Green Street, Eco City, Country</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-green-400"></i>
+                            <a href="mailto:info@ims.com" class="hover:text-white">info@ims.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-green-400"></i>
+                            <a href="tel:+919876543210" class="hover:text-white">+91 98765 43210</a>
+                        </li>
+                    </ul>
+
+                    <form action="#" method="post" class="mt-6">
+                        <label for="newsletter" class="sr-only">Subscribe</label>
+                        <div class="flex">
+                            <input id="newsletter" name="email" type="email" placeholder="Your email"
+                                   class="w-full px-3 py-2 rounded-l-lg bg-gray-800 text-gray-200 placeholder-gray-400 focus:outline-none"
+                                   aria-label="Email address">
+                            <button type="submit" class="bg-green-600 hover:bg-green-700 px-4 rounded-r-lg text-white font-semibold">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between">
+                <p class="text-sm text-gray-500">&copy; {% now "Y" %} IMS. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 flex items-center space-x-4">
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
 
     <!-- Floating Buttons -->
     <a href="tel:+919876543210" class="floating-btn call-btn" title="Call Us">
