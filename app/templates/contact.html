@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact Us | A8A9 Logistics
+{% endblock %}
+
+{% block content %}
+
+
+
+<section class="relative h-[30vh] flex items-center justify-center bg-fixed bg-center bg-cover"
+    style="background-image: linear-gradient(rgba(12,133,16,0.3), rgba(12,133,16,0.3)), url('https://plus.unsplash.com/premium_photo-1661963559074-9655a9404f1a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29udGFpbmVyJTIwc2hpcHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000');">
+    <div class="text-center text-white px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">CONTACT US</h1>
+        <p class="text-lg text-gray-200">Home > Contact</p>
+    </div>
+</section>
+
+
+<section class="py-16 bg-white text-green-800">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+        <!-- Header -->
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-green-700 mb-3">Get In Touch</h2>
+            <p class="text-lg text-green-600 max-w-2xl mx-auto">
+                We’re here to help with your freight, logistics, or supply chain needs.
+                Reach out to our team and we’ll get back to you shortly.
+            </p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- Contact Info -->
+            <div class="space-y-6" data-aos="fade-right">
+                <h3 class="text-2xl font-semibold text-green-700 mb-4">Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt text-green-600 mr-3"></i> A8A9 Logistics Pvt. Ltd, Dubai, UAE</p>
+                <p><i class="fas fa-phone text-green-600 mr-3"></i> +971 566 67157</p>
+                <p><i class="fas fa-envelope text-green-600 mr-3"></i> info@a8a9logistics.com</p>
+                <p><i class="fas fa-clock text-green-600 mr-3"></i> Mon - Sat : 9:00 AM - 6:00 PM</p>
+
+                <div class="flex space-x-4 pt-4">
+                    <a href="#" class="text-green-600 hover:text-green-800 text-2xl"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-green-600 hover:text-green-800 text-2xl"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-green-600 hover:text-green-800 text-2xl"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-green-50 rounded-2xl p-8 shadow-lg" data-aos="fade-left">
+                <form class="space-y-5">
+                    <div>
+                        <label class="block text-green-700 font-medium mb-1">Full Name</label>
+                        <input type="text" placeholder="Your name"
+                            class="w-full px-4 py-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-green-700 font-medium mb-1">Email</label>
+                        <input type="email" placeholder="your@email.com"
+                            class="w-full px-4 py-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-green-700 font-medium mb-1">Phone</label>
+                        <input type="text" placeholder="+971 566 67157"
+                            class="w-full px-4 py-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-green-700 font-medium mb-1">Message</label>
+                        <textarea rows="4" placeholder="Write your message..."
+                            class="w-full px-4 py-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-green-700 text-white py-3 rounded-lg font-semibold hover:bg-green-800 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div class="mt-16 rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115862.20807025128!2d55.2000697!3d25.0715302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4327e16f2c91%3A0xe86d9eb8b4141bc1!2sDubai%2C%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1688829924343!5m2!1sen!2sin"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}

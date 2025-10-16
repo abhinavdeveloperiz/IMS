@@ -1,0 +1,543 @@
+{% extends 'base.html' %}
+{% block title %}Home - IMS{% endblock %}
+
+{% block content %}
+
+
+<!-- Hero Carousel -->
+<div id="hero-carousel" class="relative h-screen w-full overflow-hidden">
+    <!-- Carousel Slides -->
+    <div class="carousel-container h-full transition-transform duration-700 ease-in-out">
+        <!-- Slide 1 -->
+        <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+            <div class="relative h-full bg-cover bg-center"
+                style="background-image: url('https://flylogistics.co.in/new/ban5.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">Your Trusted Partner in Global
+                        Logistics</h1>
+                    <p class="text-lg md:text-2xl mb-6 animate-fade-in-up animation-delay-200">Infra Modern Solution
+                        Company</p>
+                    <a href="#services"
+                        class="group bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 animate-fade-in-up animation-delay-400 flex items-center space-x-2">
+                        <span>Get Started</span>
+                        <i class="fas fa-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+            <div class="relative h-full bg-cover bg-center"
+                style="background-image: url('https://static.vecteezy.com/system/resources/previews/027/534/291/large_2x/a-cargo-truck-with-a-container-is-seen-driving-across-a-bridge-while-a-semi-truck-with-a-cargo-trailer-follows-closely-behind-photo.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-r from-green-900/70 to-black/50"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">Global Supply Chain Solutions
+                    </h1>
+                    <p class="text-lg md:text-2xl mb-6 animate-fade-in-up animation-delay-200">Connecting Business
+                        Worldwide</p>
+                    <a href="#about"
+                        class="group bg-white text-green-700 font-semibold px-8 py-4 rounded-lg transition-all duration-300 animate-fade-in-up animation-delay-400 flex items-center space-x-2">
+                        <span>Learn More</span>
+                        <i class="fas fa-chevron-right transform group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+            <div class="relative h-full bg-cover bg-center"
+                style="background-image: url('https://icatlogistics.com/wp-content/uploads/The-Different-Modes-of-Transportation-Header-e1645547707423.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-green-900/50"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">Innovative Logistics Solutions
+                    </h1>
+                    <p class="text-lg md:text-2xl mb-6 animate-fade-in-up animation-delay-200">Future of Transportation
+                    </p>
+                    <a href="#contact"
+                        class="group bg-transparent border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-green-700 transition-all duration-300 animate-fade-in-up animation-delay-400 flex items-center space-x-2">
+                        <span>Contact Us</span>
+                        <i class="fas fa-envelope transform group-hover:rotate-12 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button
+        class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-4 rounded-full backdrop-blur-sm transition-all z-20"
+        onclick="prevSlide()">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button
+        class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-4 rounded-full backdrop-blur-sm transition-all z-20"
+        onclick="nextSlide()">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Slide Indicators -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
+        <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all indicator active"></button>
+        <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all indicator"></button>
+        <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all indicator"></button>
+    </div>
+</div>
+
+<!-- Add this style section in your head or in a separate CSS file -->
+<style>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    .animation-delay-200 {
+        animation-delay: 0.2s;
+    }
+
+    .animation-delay-400 {
+        animation-delay: 0.4s;
+    }
+
+    .carousel-slide.active {
+        opacity: 1;
+    }
+
+    .indicator.active {
+        background-color: white;
+        width: 2rem;
+    }
+</style>
+
+<!-- Add this script section before closing body tag -->
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    let slideInterval;
+
+    function showSlide(index) {
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+            slide.style.opacity = '0';
+        });
+        indicators.forEach(indicator => {
+            indicator.classList.remove('active');
+        });
+
+        slides[index].classList.add('active');
+        slides[index].style.opacity = '1';
+        indicators[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+        resetInterval();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+        resetInterval();
+    }
+
+    function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    // Initialize carousel
+    showSlide(0);
+    slideInterval = setInterval(nextSlide, 5000);
+
+    // Add click events to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+            resetInterval();
+        });
+    });
+</script>
+
+
+
+<!-- Section -->
+<section class="grid md:grid-cols-3 gap-0">
+
+    <!-- Card 1 -->
+    <div class="relative group h-[400px] bg-cover bg-center"
+        style="background-image: url('https://hkvinalogistics.com/Content/images/slider/slider2.jpg');">
+        <div class="absolute inset-0 bg-green-500/30 group-hover:bg-black/70 transition-all"></div>
+        <div class="relative z-10 p-10 flex flex-col justify-end h-full text-white">
+            <h2 class="text-3xl font-bold mb-4">LOGISTICS</h2>
+            <p class="text-sm leading-relaxed mb-6">
+                The word cargo refers in particular to goods or produce being conveyed generally for commercial gain by
+                ship,
+                boat, or aircraft, although the term is now often extended to cover all types of freight, including that
+                carried by train, van, truck, or container.
+            </p>
+            <a href="#"
+                class="inline-block border border-white px-6 py-2 text-sm tracking-wider hover:bg-white hover:text-black transition">
+                READ MORE
+            </a>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="relative group h-[400px] bg-cover bg-center"
+        style="background-image: url('https://mdtgroup.co.za/wp-content/uploads/2024/05/9.jpg');">
+        <div class="absolute inset-0 bg-green-500/30 group-hover:bg-black/70 transition-all"></div>
+        <div class="relative z-10 p-10 flex flex-col justify-end h-full text-white">
+            <h2 class="text-3xl font-bold mb-4">PETROLEUM & CHEMICAL TRANSPORT</h2>
+            <p class="text-sm leading-relaxed mb-6">
+                The word cargo refers in particular to goods or produce being conveyed generally for commercial gain by
+                ship,
+                boat, or aircraft, although the term is now often extended to cover all types of freight, including that
+                carried by train, van, truck, or container.
+            </p>
+            <a href="#"
+                class="inline-block border border-white px-6 py-2 text-sm tracking-wider hover:bg-white hover:text-black transition">
+                READ MORE
+            </a>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="relative group h-[400px] bg-cover bg-center"
+        style="background-image: url('https://static.vecteezy.com/system/resources/previews/041/879/166/large_2x/ai-generated-truck-with-container-cargo-freight-ship-in-harbor-at-sunset-for-logistic-import-export-background-photo.jpeg');">
+        <div class="absolute inset-0 bg-green-500/30 group-hover:bg-black/70 transition-all"></div>
+        <div class="relative z-10 p-10 flex flex-col justify-end h-full text-white">
+            <h2 class="text-3xl font-bold mb-4">LOOSE CARGO TRANSPORT</h2>
+            <p class="text-sm leading-relaxed mb-6">
+                The word cargo refers in particular to goods or produce being conveyed generally for commercial gain by
+                ship,
+                boat, or aircraft, although the term is now often extended to cover all types of freight, including that
+                carried by train, van, truck, or container.
+            </p>
+            <a href="#"
+                class="inline-block border border-white px-6 py-2 text-sm tracking-wider hover:bg-white hover:text-black transition">
+                READ MORE
+            </a>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- Left Image -->
+        <div class="relative">
+            <img src="https://img.freepik.com/free-photo/aerial-view-cargo-ship-cargo-container-harbor_335224-1380.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="Global Logistics" class="w-full h-[400px] object-cover rounded-3xl shadow-xl">
+            <div class="absolute inset-0 bg-gradient-to-r from-green-800/30 to-transparent rounded-3xl"></div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="text-gray-700" data-aos="fade-left">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-6">
+                Your Trusted Partner in Global Logistics
+            </h2>
+
+            <!-- Paragraphs -->
+            <p class="leading-relaxed mb-4">
+                Welcome to <span class="font-semibold">Infra Modern Solution Company (IMS)</span>, a dynamic freight
+                forwarding and logistics
+                provider headquartered in Saudi Arabia, dedicated to delivering seamless, end-to-end transportation and
+                supply chain
+                solutions. With over 15 years of industry expertise, IMS is built on a foundation of deep knowledge,
+                operational
+                excellence, and a customer-centric approach.
+            </p>
+
+            <div id="moreText" class="hidden">
+                <p class="leading-relaxed mb-4">
+                    We specialize in connecting Saudi Arabia to the world and the world to Saudi Arabia, offering a full
+                    spectrum of logistics
+                    services tailored to meet the diverse needs of our clients. At IMS, we provide comprehensive
+                    transportation solutions
+                    across all modes—air, sea, LCL (Less than Container Load), charter services, and GCC-wide road
+                    transportation.
+                </p>
+
+                <p class="leading-relaxed mb-4">
+                    Complementing our transport capabilities, we offer state-of-the-art warehousing and distribution
+                    services, ensuring your
+                    cargo is handled with precision and efficiency at every stage of the supply chain. Whether you
+                    require global imports,
+                    exports, or regional logistics within the GCC, IMS is equipped to deliver reliable, cost-effective,
+                    and timely solutions.
+                </p>
+
+                <p class="leading-relaxed">
+                    Our mission is to empower businesses by streamlining their logistics operations, fostering growth,
+                    and ensuring their goods
+                    move effortlessly across borders. With a commitment to innovation, reliability, and sustainability,
+                    <span class="font-semibold">Infra Modern Solution Company</span> is your trusted partner for all
+                    your logistics needs, from local
+                    to global. Choose IMS—where modern solutions meet global ambitions.
+                </p>
+            </div>
+
+            <!-- Read More Button -->
+            <button id="readMoreBtn"
+                class="mt-4 inline-flex items-center gap-2 text-green-700 font-semibold hover:text-green-900 transition">
+                Read more...
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- JS for Read More Toggle -->
+<script>
+    const btn = document.getElementById('readMoreBtn');
+    const moreText = document.getElementById('moreText');
+    let expanded = false;
+
+    btn.addEventListener('click', () => {
+        expanded = !expanded;
+        moreText.classList.toggle('hidden');
+        btn.innerHTML = expanded
+            ? 'Read less... <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 inline"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" /></svg>'
+            : 'Read more... <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 inline"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>';
+    });
+</script>
+
+
+
+
+
+
+<section class="relative min-h-screen flex items-center justify-center bg-fixed bg-center bg-cover"
+    style="background-image: linear-gradient(135deg, rgba(12,133,16,0.5), rgba(12,133,16,0.5)), url('https://media.istockphoto.com/id/148992794/photo/container-terminal.jpg?s=612x612&w=0&k=20&c=pdCvMFOR5yZigDsWQD8neVFBt4Pde2ReF4lVIMhVBlc=');">
+    <div class="relative z-10 w-full max-w-7xl px-6 py-20">
+
+        <!-- Title -->
+        <h1 class="text-4xl md:text-5xl  font-bold text-center text-white mb-16 md:mb-24 tracking-wide">
+            INDUSTRY VERTICALS SERVED
+        </h1>
+
+        <!-- Icons Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16">
+
+            <!-- Energy / Power -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-plug text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Energy & Power</p>
+                </div>
+            </div>
+
+            <!-- Construction / Mining -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-truck-pickup text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Construction & Mining</p>
+                </div>
+            </div>
+
+            <!-- Industrial / Manufacturing -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-industry text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Industrial & Manufacturing
+                    </p>
+                </div>
+            </div>
+
+            <!-- Retail / Commerce -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-shopping-bag text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Retail & Commerce</p>
+                </div>
+            </div>
+
+            <!-- Consumer Goods -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-shopping-cart text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Consumer Goods</p>
+                </div>
+            </div>
+
+            <!-- Automotive -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-car text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Automotive</p>
+                </div>
+            </div>
+
+            <!-- Chemical / Pharmaceutical -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-flask text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Chemical & Pharmaceutical
+                    </p>
+                </div>
+            </div>
+
+            <!-- Food & Beverage -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-utensils text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Food & Beverage</p>
+                </div>
+            </div>
+
+            <!-- Environmental -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-leaf text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Environmental</p>
+                </div>
+            </div>
+
+            <!-- Logistics & Transport -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-shipping-fast text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Logistics & Transport</p>
+                </div>
+            </div>
+
+            <!-- Healthcare -->
+            <!-- <div class="flex flex-col items-center justify-center group">
+          <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+            <i class="fas fa-heartbeat text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+            <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Healthcare</p>
+          </div>
+        </div> -->
+
+            <!-- Technology -->
+            <div class="flex flex-col items-center justify-center group">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl w-full aspect-square flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white">
+                    <i
+                        class="fas fa-microchip text-5xl md:text-6xl text-green-700 mb-3 transition-transform duration-300 group-hover:scale-110"></i>
+                    <p class="text-sm md:text-base font-semibold text-gray-800 text-center">Technology</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<script>
+    const btn = document.getElementById('read-more-btn');
+    const text = document.getElementById('about-text');
+
+    btn.addEventListener('click', () => {
+        if (text.classList.contains('max-h-40')) {
+            text.classList.remove('max-h-40');
+            text.classList.add('max-h-full');
+            btn.textContent = "Read Less";
+        } else {
+            text.classList.remove('max-h-full');
+            text.classList.add('max-h-40');
+            btn.textContent = "Read More...";
+        }
+    });
+</script>
+
+
+
+
+<section class="grid md:grid-cols-2 min-h-screen overflow-hidden">
+  <!-- Left Content -->
+  <div class="bg-green-800 text-white flex flex-col justify-center px-8 md:px-16 py-12 md:py-20">
+    <div class="max-h-[90vh] overflow-y-auto space-y-10 pr-2 md:pr-4 scrollbar-thin scrollbar-thumb-green-600 scrollbar-track-green-900/20">
+
+      <div data-aos="fade-right">
+        <h2 class="text-3xl md:text-4xl font-bold mb-3">SAFETY FIRST</h2>
+        <p class="text-lg leading-relaxed text-gray-100">
+          We adhere to the highest safety standards to protect your goods, the environment, and all stakeholders involved in 
+          the transport process. Our team is extensively trained in handling hazardous and non-hazardous materials, ensuring 
+          every shipment reaches its destination securely.
+        </p>
+      </div>
+
+      <div data-aos="fade-right" data-aos-delay="100">
+        <h2 class="text-3xl md:text-4xl font-bold mb-3">TIMELY DELIVERIES</h2>
+        <p class="text-lg leading-relaxed text-gray-100">
+          We recognize that time is a critical factor in today’s fast-paced business environment. Our well-planned routes, 
+          modern fleet, and real-time tracking systems enable us to ensure on-time deliveries, helping you maintain your 
+          operational efficiency.
+        </p>
+      </div>
+
+      <div data-aos="fade-right" data-aos-delay="200">
+        <h2 class="text-3xl md:text-4xl font-bold mb-3">CUSTOMER-CENTRIC APPROACH</h2>
+        <p class="text-lg leading-relaxed text-gray-100">
+          At Infra Modern Solution Company (IMS), we put our clients at the heart of everything we do. Our solutions are 
+          designed with flexibility and scalability in mind, allowing us to adapt to your specific needs. We strive to 
+          exceed your expectations at every step, fostering lasting partnerships based on trust and satisfaction.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Right Image -->
+  <div class="relative h-[50vh] md:h-screen">
+    <img src="/static/images/flight2.png" 
+         alt="Logistics Truck" 
+         class="">
+    <div class="absolute inset-0 bg-gradient-to-l from-green-900/30 to-transparent"></div>
+  </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %}

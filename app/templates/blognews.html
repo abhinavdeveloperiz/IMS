@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block title %}Blog | Company Name{% endblock %}
+
+{% block content %}
+<section class="relative h-[30vh] flex items-center justify-center bg-fixed bg-center bg-cover"
+    style="background-image: linear-gradient(rgba(12,133,16,0.3), rgba(12,133,16,0.3)), url('https://plus.unsplash.com/premium_photo-1661963559074-9655a9404f1a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29udGFpbmVyJTIwc2hpcHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000');">
+    <div class="text-center text-white px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 uppercase">Insights & Updates</h1>
+        <p class="text-lg text-gray-200">Home > Blog</p>
+    </div>
+</section>
+
+<section class="bg-white text-green-800 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Blog Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Blog Card 1 -->
+            <div
+                class="bg-white rounded-2xl border border-green-200 shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+                <img src="https://plus.unsplash.com/premium_photo-1661963559074-9655a9404f1a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29udGFpbmVyJTIwc2hpcHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000" alt="Global Freight Trends" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2 hover:underline cursor-pointer">Global Freight
+                        Trends 2025: What’s Changing in Supply Chains</h3>
+                    <p class="text-gray-700 mb-4">
+                        The logistics world is evolving with AI-driven forecasting, eco-friendly transport modes, and
+                        smart port automation redefining global efficiency.
+                    </p>
+                    <a href="#" class="text-green-600 font-semibold hover:text-green-800">Read More →</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div
+                class="bg-white rounded-2xl border border-green-200 shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1606964212858-c215029db704?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9naXN0aWNzfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000" alt="Sustainable Logistics" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2 hover:underline cursor-pointer">Building a
+                        Sustainable Logistics Future</h3>
+                    <p class="text-gray-700 mb-4">
+                        From electric trucks to carbon-neutral warehouses, sustainability is now the backbone of modern
+                        freight and shipping operations worldwide.
+                    </p>
+                    <a href="#" class="text-green-600 font-semibold hover:text-green-800">Read More →</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div
+                class="bg-white rounded-2xl border border-green-200 shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+                <img src="https://thumbs.dreamstime.com/b/global-business-logistics-import-export-background-container-cargo-freight-ship-transport-concept-137520514.jpg" alt="Digital Transformation" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2 hover:underline cursor-pointer">Digital
+                        Transformation in Freight Forwarding</h3>
+                    <p class="text-gray-700 mb-4">
+                        Discover how automation, tracking analytics, and real-time AI dashboards are transforming
+                        logistics management and customer transparency.
+                    </p>
+                    <a href="#" class="text-green-600 font-semibold hover:text-green-800">Read More →</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 4 -->
+            <div
+                class="bg-white rounded-2xl border border-green-200 shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+                <img src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?cs=srgb&dl=pexels-chanaka-906494.jpg&fm=jpg" alt="Warehousing Innovation" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2 hover:underline cursor-pointer">Smart
+                        Warehousing: The Next Frontier</h3>
+                    <p class="text-gray-700 mb-4">
+                        IoT sensors, automated pallet systems, and AI inventory tracking are redefining warehousing
+                        efficiency for global supply chains.
+                    </p>
+                    <a href="#" class="text-green-600 font-semibold hover:text-green-800">Read More →</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 5 -->
+            <div
+                class="bg-white rounded-2xl border border-green-200 shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+                <img src="https://media.istockphoto.com/id/968819844/photo/logistics-and-transportation-of-container-cargo-ship-and-cargo-plane-with-working-crane-bridge.jpg?s=612x612&w=0&k=20&c=sxdjLo90_yDs1qAaKsYoHusA1Zzd-FXPEk-QXavsN-8=" alt="Project Cargo Logistics" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2 hover:underline cursor-pointer">Mastering
+                        Project Cargo Logistics</h3>
+                    <p class="text-gray-700 mb-4">
+                        Handling oversized and high-value cargo requires expertise, precise planning, and reliable
+                        equipment to ensure safe, timely delivery.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Blog Card 6 -->
+            <div
+                class="bg-white rounded-2xl border border-green-200 shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+                <img src="https://media.istockphoto.com/id/968819844/photo/logistics-and-transportation-of-container-cargo-ship-and-cargo-plane-with-working-crane-bridge.jpg?s=612x612&w=0&k=20&c=sxdjLo90_yDs1qAaKsYoHusA1Zzd-FXPEk-QXavsN-8=" alt="Cross Trade Logistics" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2 hover:underline cursor-pointer">Simplifying
+                        Cross Trade Logistics</h3>
+                    <p class="text-gray-700 mb-4">
+                        Cross-trade shipping connects two countries without passing through your base — discover how
+                        this smart strategy boosts cost efficiency.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-12">
+            <nav class="flex items-center gap-2 text-green-700 font-semibold">
+                <a href="#"
+                    class="px-4 py-2 border border-green-400 rounded-md hover:bg-green-600 hover:text-white transition">1</a>
+                <a href="#"
+                    class="px-4 py-2 border border-green-400 rounded-md hover:bg-green-600 hover:text-white transition">2</a>
+                <a href="#"
+                    class="px-4 py-2 border border-green-400 rounded-md hover:bg-green-600 hover:text-white transition">Next
+                    →</a>
+            </nav>
+        </div>
+    </div>
+</section>
+{% endblock %}
