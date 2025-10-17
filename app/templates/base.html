@@ -111,26 +111,7 @@
 </head>
 
 <body class="flex flex-col min-h-screen bg-gray-50">
-    <!-- Top Info Bar -->
-    <div class="bg-green-600 text-white py-2 px-4 hidden md:block">
-        <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
-            <div class="flex items-center space-x-4">
-                <a href="mailto:info@ims.com" class="flex items-center hover:text-green-200 transition">
-                    <i class="fas fa-envelope mr-2"></i>
-                    <span>info@ims.com</span>
-                </a>
-                <a href="tel:+919876543210" class="flex items-center hover:text-green-200 transition">
-                    <i class="fas fa-phone mr-2"></i>
-                    <span>+91 98765 43210</span>
-                </a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <a href="#" class="hover:text-green-200 transition"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-green-200 transition"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-green-200 transition"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Enhanced Navbar -->
     <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-lg z-50">
@@ -237,11 +218,12 @@
         </div>
     </nav>
 
+    <main class="pt-20">
+        {% block content %}
+        {% endblock %}
+    </main>
 
-    {% block content %}
-    {% endblock %}
-
-        <footer class="bg-gray-900 text-gray-200 ">
+    <footer class="bg-gray-900 text-gray-200 ">
         <div class="max-w-7xl mx-auto px-6 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- About / Brand -->
@@ -250,13 +232,14 @@
                         <img src="{% static 'images/logo.png' %}" alt="Logo" class="h-12 mr-3">
                     </a>
                     <p class="text-sm text-gray-400">
-                        Trusted partner in logistics — delivering global supply chain solutions with reliability and speed.
+                        Trusted partner in logistics — delivering global supply chain solutions with reliability and
+                        speed.
                     </p>
                     <div class="mt-4 flex space-x-3">
                         <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                      
+
                         <a href="#" class="text-gray-400 hover:text-white" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
@@ -307,31 +290,28 @@
                         </li>
                     </ul>
 
-                    <form action="#" method="post" class="mt-6">
-                        <label for="newsletter" class="sr-only">Subscribe</label>
-                        <div class="flex">
-                            <input id="newsletter" name="email" type="email" placeholder="Your email"
-                                   class="w-full px-3 py-2 rounded-l-lg bg-gray-800 text-gray-200 placeholder-gray-400 focus:outline-none"
-                                   aria-label="Email address">
-                            <button type="submit" class="bg-green-600 hover:bg-green-700 px-4 rounded-r-lg text-white font-semibold">
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
+             
                 </div>
             </div>
 
             <!-- Divider -->
-            <div class="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between">
+            <div
+                class="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between">
                 <p class="text-sm text-gray-500">&copy; {% now "Y" %} IMS. All rights reserved.</p>
                 <div class="mt-4 md:mt-0 flex items-center space-x-4">
                     <a href="#" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
                     <a href="#" class="text-sm text-gray-400 hover:text-white">Terms of Service</a>
                 </div>
             </div>
+            <div
+                class="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between">
+                <p class="text-sm text-gray-500">Designed and Developed by <a href="https://www.inspirezesttechnologies.com/" class="hover:text-white">Inspirezesttechnologies Pvt Ltd</a></p>
+                <div class="mt-4 md:mt-0 flex items-center space-x-4">
+                </div>
+            </div>
         </div>
     </footer>
-    
+
 
     <!-- Floating Buttons -->
     <a href="tel:+919876543210" class="floating-btn call-btn" title="Call Us">
