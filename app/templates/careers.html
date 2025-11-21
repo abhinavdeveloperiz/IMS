@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% block title %}Careers - IMS{% endblock %}
+{% block content %}
+
+<!-- TOP BANNER -->
+<section class="relative h-[30vh] bg-center bg-cover bg-fixed"
+    style="background-image: linear-gradient(rgba(12,133,16,0.3), rgba(12,133,16,0.3)),
+    url('https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=3000');">
+
+    <div class="absolute inset-0 flex items-center justify-center text-center px-6">
+        <div>
+            <h1 class="text-5xl font-bold text-white mb-4">CAREERS</h1>
+            <p class="text-gray-200 tracking-wide">Home › Careers</p>
+        </div>
+    </div>
+</section>
+
+<!-- INTRO SECTION (Based on ECU layout) -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+
+        <!-- Left Content -->
+        <div class="">
+            <h2 class="text-3xl font-bold text-green-700 mb-6 uppercase">
+                you get more than just a job.
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-4 text-justify">
+                At IMS Worldwide, you receive an unbeatable opportunity for professional and personal growth.
+                Our expanding global network enables you to excel and discover your potential in every role.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mb-4 text-justify">
+                We offer unmatched diversity, customer experience, and exposure to global logistics that help you
+                grow into the best version of yourself. Every day at IMS brings learning, teamwork, and meaningful impact.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mb-6 text-justify">
+                We welcome talent who are innovative and passionate about solving complex challenges.
+            </p>
+
+            <a href="#apply"
+                class="bg-green-700 text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition font-semibold">
+                Apply Now
+            </a>
+        </div>
+
+        <!-- Right Image (Great Place to Work Style) -->
+        <div class="flex items-center justify-center">
+            <img src="https://img.freepik.com/free-photo/global-logistics-transportation-network_23-2152005448.jpg?semt=ais_hybrid&w=740&q=80" 
+                 alt="Great Place To Work" class="w-[90%] h-auto shadow-xl rounded-lg border border-green-600">
+        </div>
+
+    </div>
+</section>
+
+<!-- FEATURES CARDS (Your previous cards) -->
+<section class="py-16 bg-green-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-green-700 text-center mb-10">Why Choose IMS?</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="bg-white border border-green-600 rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition">
+                <i class="fas fa-users text-green-700 text-5xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Work Culture</h3>
+                <p class="text-gray-700">Inclusive, collaborative and growth-focused atmosphere.</p>
+            </div>
+
+            <div class="bg-white border border-green-600 rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition">
+                <i class="fas fa-graduation-cap text-green-700 text-5xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Learning & Training</h3>
+                <p class="text-gray-700">Continuous training, workshops, and mentorship programs.</p>
+            </div>
+
+            <div class="bg-white border border-green-600 rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition">
+                <i class="fas fa-briefcase text-green-700 text-5xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Career Growth</h3>
+                <p class="text-gray-700">Opportunity for promotions and internal talent growth.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY WORK AT IMS (Large Image Section) -->
+<section class="relative min-h-[70vh] bg-fixed bg-center bg-cover flex items-center"
+    style="background-image: linear-gradient(rgba(12,133,16,0.6), rgba(12,133,16,0.6)),
+    url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=3000');">
+
+    <div class="max-w-5xl mx-auto px-6 text-white" data-aos="fade-right">
+        <h2 class="text-4xl font-bold mb-8 tracking-wide uppercase">
+            Why Work At IMS?
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Point 1 -->
+            <div class="flex items-start space-x-4">
+                <i class="fas fa-money-bill-wave text-3xl mt-1"></i>
+                <p class="text-lg leading-relaxed font-light">
+                    Competitive salary packages, bonuses, and performance-based rewards.
+                </p>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="flex items-start space-x-4">
+                <i class="fas fa-user-tie text-3xl mt-1"></i>
+                <p class="text-lg leading-relaxed font-light">
+                    Work alongside experienced professionals within global logistics.
+                </p>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="flex items-start space-x-4">
+                <i class="fas fa-building text-3xl mt-1"></i>
+                <p class="text-lg leading-relaxed font-light">
+                    Modern workspaces, advanced tools, and supportive leadership.
+                </p>
+            </div>
+            {% now "Y" as current_year %}
+            <!-- Point 4 -->
+            <div class="flex items-start space-x-4">
+                <i class="fas fa-flag text-3xl mt-1"></i>
+                <p class="text-lg leading-relaxed font-light">
+                    Be part of Saudi Arabia’s Vision {{ current_year|add:5 }} growth & expansion initiatives.
+                </p>
+            </div>
+
+            <!-- Point 5 -->
+            <div class="flex items-start space-x-4">
+                <i class="fas fa-chart-line text-3xl mt-1"></i>
+                <p class="text-lg leading-relaxed font-light">
+                    Clear career development pathways with internal promotions.
+                </p>
+            </div>
+
+            <!-- Point 6 -->
+            <div class="flex items-start space-x-4">
+                <i class="fas fa-handshake text-3xl mt-1"></i>
+                <p class="text-lg leading-relaxed font-light">
+                    Inclusive work culture that values teamwork, innovation & respect.
+                </p>
+            </div>
+
+            <!-- Point 7 -->
+            <div class="flex items-start space-x-4">
+                <i class="fas fa-lightbulb text-3xl mt-1"></i>
+                <p class="text-lg leading-relaxed font-light">
+                    Opportunities to learn through training, workshops & mentorship.
+                </p>
+            </div>
+
+            <!-- Point 8 -->
+            <div class="flex items-start space-x-4">
+                <i class="fas fa-globe text-3xl mt-1"></i>
+                <p class="text-lg leading-relaxed font-light">
+                    Exposure to international clients and global logistics operations.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- OPEN POSITIONS (Your Table Redesigned) -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-green-700 text-center mb-10">
+            Current Open Positions
+        </h2>
+
+        <div class="overflow-x-auto border border-green-600 rounded-xl shadow-xl">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-green-700 text-white uppercase text-sm">
+                    <tr>
+                        <th class="py-4 px-4">Position</th>
+                        <th class="py-4 px-4">Location</th>
+                        <th class="py-4 px-4">Type</th>
+                        <th class="py-4 px-4">Apply</th>
+                    </tr>
+                </thead>
+
+                <tbody class="text-green-900 divide-y divide-green-300">
+
+                    <tr class="hover:bg-green-50">
+                        <td class="py-4 px-4 font-semibold">Logistics Coordinator</td>
+                        <td class="py-4 px-4">Riyadh, KSA</td>
+                        <td class="py-4 px-4">Full-Time</td>
+                        <td class="py-4 px-4">
+                            <a href="#apply" class="text-green-700 font-semibold hover:underline">Apply Now</a>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-green-50">
+                        <td class="py-4 px-4 font-semibold">Customer Service Executive</td>
+                        <td class="py-4 px-4">Dammam, KSA</td>
+                        <td class="py-4 px-4">Full-Time</td>
+                        <td class="py-4 px-4">
+                            <a href="#apply" class="text-green-700 font-semibold hover:underline">Apply Now</a>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-green-50">
+                        <td class="py-4 px-4 font-semibold">Warehouse Supervisor</td>
+                        <td class="py-4 px-4">Jeddah, KSA</td>
+                        <td class="py-4 px-4">Full-Time</td>
+                        <td class="py-4 px-4">
+                            <a href="#apply" class="text-green-700 font-semibold hover:underline">Apply Now</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- APPLY CTA SECTION -->
+<section class="relative h-[45vh] bg-center bg-cover bg-fixed flex items-center justify-center"
+    id="apply"
+    style="background-image: linear-gradient(rgba(12,133,16,0.6), rgba(12,133,16,0.6)),
+    url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=3000');">
+
+    <div class="text-center text-white px-6">
+        <h2 class="text-4xl font-bold mb-4">Ready To Start Your Career?</h2>
+        <p class="text-lg mb-6">Join IMS and build your future with us.</p>
+
+        <a href="mailto:jobs@ims.com" 
+           class="bg-white text-green-700 font-bold px-10 py-3 rounded-full shadow-lg hover:bg-gray-200 transition">
+            Send Your Resume
+        </a>
+    </div>
+
+</section>
+
+{% endblock %}

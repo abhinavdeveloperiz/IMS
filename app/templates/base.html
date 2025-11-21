@@ -11,6 +11,29 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Inter', 'Poppins', 'Segoe UI', sans-serif;
+            font-weight: 600;
+            line-height: 1.7;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: 'Inter', 'Poppins', 'Segoe UI', sans-serif;
+            line-height: 1.7;
+        }
+    </style>
+
+
+
+
     <style>
         /* Base Styles */
         html,
@@ -136,11 +159,11 @@
                     </a>
                     <a href="{% url 'services' %}"
                         class="nav-link text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition">
-                        <i class="fas fa-cogs mr-1"></i> Services
+                        <i class="fas fa-cogs mr-1"></i>Business Services
                     </a>
                     <a href="{% url 'gallery' %}"
                         class="nav-link text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition">
-                        <i class="fas fa-images mr-1"></i> Gallery
+                        <i class="fas fa-briefcase mr-1"></i> Careers
                     </a>
                     <a href="{% url 'blognews' %}"
                         class="nav-link text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition">
@@ -182,12 +205,12 @@
                     <a href="{% url 'services' %}"
                         class="flex items-center space-x-2 text-gray-700 hover:text-green-600 hover:bg-green-50 p-3 rounded-lg transition-all">
                         <i class="fas fa-cogs w-6"></i>
-                        <span>Services</span>
+                        <span>Business Services</span>
                     </a>
                     <a href="{% url 'gallery' %}"
                         class="flex items-center space-x-2 text-gray-700 hover:text-green-600 hover:bg-green-50 p-3 rounded-lg transition-all">
-                        <i class="fas fa-images w-6"></i>
-                        <span>Gallery</span>
+                        <i class="fas fa-briefcase w-6"></i>
+                        <span>Careers</span>
                     </a>
                     <a href="{% url 'blognews' %}"
                         class="flex items-center space-x-2 text-gray-700 hover:text-green-600 hover:bg-green-50 p-3 rounded-lg transition-all">
@@ -255,7 +278,7 @@
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="{% url 'about' %}" class="hover:text-white">About Us</a></li>
                         <li><a href="{% url 'services' %}" class="hover:text-white">Services</a></li>
-                        <li><a href="{% url 'gallery' %}" class="hover:text-white">Gallery</a></li>
+                        <li><a href="{% url 'gallery' %}" class="hover:text-white">Career</a></li>
                         <li><a href="{% url 'blognews' %}" class="hover:text-white">Blog / News</a></li>
                         <li><a href="{% url 'contact' %}" class="hover:text-white">Contact</a></li>
                     </ul>
@@ -290,7 +313,7 @@
                         </li>
                     </ul>
 
-             
+
                 </div>
             </div>
 
@@ -305,7 +328,9 @@
             </div>
             <div
                 class="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between">
-                <p class="text-sm text-gray-500">Designed and Developed by <a href="https://www.inspirezesttechnologies.com/" class="hover:text-white">Inspirezesttechnologies Pvt Ltd</a></p>
+                <p class="text-sm text-gray-500">Designed and Developed by <a
+                        href="https://www.inspirezesttechnologies.com/" class="hover:text-white">Inspirezesttechnologies
+                        Pvt Ltd</a></p>
                 <div class="mt-4 md:mt-0 flex items-center space-x-4">
                 </div>
             </div>

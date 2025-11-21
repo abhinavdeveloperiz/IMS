@@ -16,7 +16,7 @@ def Blognews(request):
     return render(request, 'blognews.html')
 
 def Gallery(request):
-    return render(request, 'gallery.html')
+    return render(request, 'careers.html')
 
 def Contact(request):
     return render(request, 'contact.html')
