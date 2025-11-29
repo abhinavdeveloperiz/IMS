@@ -4,7 +4,6 @@
 {% block content %}
 
 <style>
-
   .parallax {
     background-attachment: fixed;
     background-position: center;
@@ -170,11 +169,11 @@
           <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
             <span class="text-sm font-semibold">AVIATION LOGISTICS</span>
           </div>
-          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">
             <i class="fas fa-plane-departure mr-3"></i>
             IMS Air Freight
           </h2>
-          <p class="text-xl mb-8 leading-relaxed opacity-95">
+          <p class="text-xl mb-8 leading-relaxed opacity-95 text-justify">
             Unparalleled speed and precision for time-sensitive shipments, connecting Saudi Arabia to global markets
             with excellence.
           </p>
@@ -273,11 +272,11 @@
           <div class="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full mb-6">
             <span class="text-sm font-semibold">MARITIME LOGISTICS</span>
           </div>
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
             <i class="fas fa-ship mr-3 text-green-600"></i>
             IMS Sea Freight
           </h2>
-          <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          <p class="text-xl text-gray-600 mb-8 leading-relaxed text-justify">
             Reliable, cost-effective ocean shipping connecting Saudi Arabia to global trade routes with precision and
             efficiency.
           </p>
@@ -297,68 +296,101 @@
   </section>
 
   <!-- Road Freight & Customs -->
-  <section class="py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Road Freight -->
-        <div class="bg-gradient-to-br from-green-600 to-green-500 rounded-3xl p-10 text-white shadow-2xl">
-          <div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6">
+<section class="py-14 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <!-- Road Freight -->
+      <div 
+        class="relative rounded-3xl p-10 text-white shadow-2xl transform hover:-translate-y-2 transition-all duration-500"
+        style="background-image: url('https://plus.unsplash.com/premium_photo-1733342421852-3bce709563e4?fm=jpg&q=60&w=3000'); 
+               background-size: cover; 
+               background-position: center; 
+               background-attachment: fixed;">
+        
+        <!-- Dark Gradient Overlay -->
+        <div class="absolute inset-0 rounded-3xl bg-black/50"></div>
+
+        <div class="relative z-10">
+          <!-- Icon Box -->
+          <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm shadow-lg">
             <i class="fas fa-truck text-4xl"></i>
           </div>
-          <h2 class="text-3xl font-bold mb-4">IMS Road Freight</h2>
-          <p class="text-lg mb-8 opacity-95">
-            Fast, reliable regional transportation across GCC with modern fleet and smart routing.
+
+          <h2 class="text-3xl font-extrabold mb-4">IMS Road Freight</h2>
+          <p class="text-lg opacity-95 mb-8">
+            Fast and reliable transportation across GCC, supported by advanced fleet technology.
           </p>
+
           <ul class="space-y-4">
             <li class="flex items-start">
               <i class="fas fa-location-dot mt-1 mr-3 text-yellow-300"></i>
-              <span>Real-time GPS tracking on all vehicles</span>
+              <span>Live GPS tracking for every shipment</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-clock mt-1 mr-3 text-yellow-300"></i>
-              <span>Express delivery within 24-72 hours</span>
+              <span>Express delivery between 24–72 hours</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-truck-ramp-box mt-1 mr-3 text-yellow-300"></i>
-              <span>Specialized equipment for heavy cargo</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Customs Clearance -->
-        <div class="bg-gray-900 rounded-3xl p-10 text-white shadow-2xl">
-          <div class="w-20 h-20 bg-green-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6">
-            <i class="fas fa-file-invoice text-4xl text-green-400"></i>
-          </div>
-          <h2 class="text-3xl font-bold mb-4">IMS Customs Clearance</h2>
-          <p class="text-lg mb-8 text-gray-300">
-            Streamlined customs processing ensuring compliance and efficiency across all Saudi borders.
-          </p>
-          <ul class="space-y-4 text-gray-300">
-            <li class="flex items-start">
-              <i class="fas fa-stamp mt-1 mr-3 text-green-400"></i>
-              <span>Fast-track clearance for urgent shipments</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-file-contract mt-1 mr-3 text-green-400"></i>
-              <span>Complete documentation support</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-scale-balanced mt-1 mr-3 text-green-400"></i>
-              <span>Full regulatory compliance expertise</span>
+              <span>Specialized trucks for heavy & oversized cargo</span>
             </li>
           </ul>
         </div>
       </div>
+
+      <!-- Customs Clearance -->
+      <div 
+        class="relative rounded-3xl p-10 text-white shadow-2xl transform hover:-translate-y-2 transition-all duration-500"
+        style="background-image: url('https://media.istockphoto.com/id/1474043686/photo/business-manager-talking-to-a-group-of-employees-at-a-distribution-warehouse.jpg?s=612x612&w=0&k=20&c=i-sXngKASrpPfoOA0-NdebfCHbFlLZ_OsDyyQspvNWw='); 
+               background-size: cover; 
+               background-position: center; 
+               background-attachment: fixed;">
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 rounded-3xl bg-black/50"></div>
+
+        <div class="relative z-10">
+          <!-- Icon Box -->
+          <div class="w-20 h-20 bg-white/25 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm shadow-lg">
+            <i class="fas fa-file-invoice text-4xl text-white"></i>
+          </div>
+
+          <h2 class="text-3xl font-extrabold mb-4">IMS Customs Clearance</h2>
+          <p class="text-lg text-gray-200 mb-8">
+            Hassle-free and accurate clearance processes across all Saudi ports and borders.
+          </p>
+
+          <ul class="space-y-4 text-gray-200">
+            <li class="flex items-start">
+              <i class="fas fa-stamp mt-1 mr-3 text-green-400"></i>
+              <span>Fast-track handling for urgent consignments</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-file-contract mt-1 mr-3 text-green-400"></i>
+              <span>Complete documentation preparation & validation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-scale-balanced mt-1 mr-3 text-green-400"></i>
+              <span>100% compliance with regulatory standards</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Industry Verticals -->
   <section class="relative py-24 parallax"
     style="background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1600');">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
           Industry Verticals We Serve
         </h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -455,7 +487,7 @@
   <section class="py-24 bg-gradient-to-br from-green-600 to-green-500">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
           Value Added Services
         </h2>
         <p class="text-xl text-white/90 max-w-2xl mx-auto">
